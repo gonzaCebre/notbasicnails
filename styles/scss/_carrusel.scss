@@ -1,0 +1,42 @@
+.carousel{
+  width: 100%;
+
+  &__contenedor{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .carousel__anterior,
+    .carousel__siguiente{
+      background: none;
+      width: fit-content;
+      border: none;
+      color: $violet;
+
+      &:hover{
+        cursor: pointer;
+        color: $green;
+      }
+    }
+
+    .carousel__lista{
+      display: flex;
+      align-items: center;
+      height: fit-content;
+      width: 80%;
+      overflow: hidden;
+      border-radius: 15px;
+
+      .carousel__elemento{
+        height: 100%;
+        overflow: hidden;
+      }
+    }
+
+  }
+
+  .glider-dot.active{
+    background-color: $green;
+  }
+}

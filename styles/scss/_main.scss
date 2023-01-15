@@ -1,0 +1,211 @@
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  section{
+    width: 80%;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .presentation{
+      background-color: $violet;
+      border-radius: .4375rem;
+      height: 380px;
+      width: 70%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+
+      .left-star{
+        position: absolute;
+        height: 40px;
+        aspect-ratio: 1/1;
+        top: -20px;
+        right: -20px;
+      }
+
+      .right-star{
+        position: absolute;
+        height: 40px;
+        aspect-ratio: 1/1;
+        bottom: -20px;
+        left: -20px;
+      }
+
+      &-content{
+        width: 70%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .avatar{
+          height: 180px;
+          /* margin: 3rem 0; */
+        }
+
+        p{
+          /* max-width: 60%; */
+          text-align: center;
+          color: $green;
+        }
+      }
+
+
+    }
+
+    article{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2.5rem;
+
+      div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        img{
+          width: 80%;
+        }
+
+        div{
+          h3{
+            display: none;
+          }
+        }
+      }
+
+    }
+
+
+  }
+}
+
+#giftCard{
+  img{
+    border: 15px solid $violet;
+    border-radius: 15px;
+    margin: 1.3rem 0;
+    width: 70%;
+  }
+}
+
+
+@media screen and (min-width: 768px){
+
+  .presentation{
+    width: 90% !important;
+    height: 260px !important;
+
+    &-content{
+      flex-direction: row !important;
+      width: 90% !important;
+      justify-content: space-around !important;
+
+      .avatar{
+        margin-right: 2rem;
+      }
+
+      p{
+        text-align: left !important;
+      }
+    }
+
+
+  }
+
+  article{
+    
+    img{
+      width: 70%;
+      transition: all .5s ease-in-out;
+
+    }
+
+  }
+}
+
+@media screen and (min-width: 992px){
+
+  .presentation{
+    width: 60% !important;
+    height: 280px !important;
+
+    &-content{
+      flex-direction: row !important;
+
+
+      p{
+        text-align: left !important;
+      }
+    }
+
+
+  }
+
+  article{
+
+    h3{
+      display: none !important;
+    }
+
+    div{
+      width: 90% !important;
+      flex-direction: row !important;
+      align-items: center;
+
+      img{
+        width: 35% !important;
+        margin-right: 2rem;
+      }
+
+      div{
+        display: flex;
+        flex-direction: column !important;
+
+        h3{
+          display: block !important;
+          width: fit-content;
+          margin: 0;
+          margin-bottom: 1rem;
+          padding: 0;
+          text-align: left;
+          align-self: flex-start;
+    
+        }
+
+        p{
+          text-align: left;
+          padding: 0;
+          margin: 0;
+          margin-bottom: 1rem;
+        }
+
+        a{
+          align-self: flex-start;
+          /* margin-right: 3rem !important; */
+        }
+      }
+    }
+
+  }
+
+  #giftCard{
+    img{
+      width: 50%;
+    }
+  }
+
+
+}
+

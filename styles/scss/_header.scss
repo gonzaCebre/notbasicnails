@@ -1,0 +1,169 @@
+header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  nav{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid $violet;
+
+    position: relative;
+    transition: all 1s ease;
+
+    img{
+      height: 100px;
+    }
+
+    .menu-btn {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+
+      
+
+      &__burger {
+          width: 50px;
+          height: 4px;
+          background: $violet;
+          border-radius: 5px;
+          transition: all .5s ease-in-out;
+          margin: 0;
+
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            @extend .menu-btn__burger;
+            width: 30px;
+          }
+      }
+    }
+
+
+    .menu-btn__burger::before {
+      transform: translateY(-10px);
+    }
+    .menu-btn__burger::after {
+      transform: translateY(10px);
+    }
+
+
+    // ANIMACION BOTON HAMBURGUESA
+    .menu-btn.open .menu-btn__burger {
+      transform: translateX(-50px);
+      background: transparent;
+      box-shadow: none;
+    }
+    .menu-btn.open .menu-btn__burger::before {
+      transform: rotate(45deg) translate(35px, -35px);
+      background: $green;
+    }
+    .menu-btn.open .menu-btn__burger::after {
+      transform: rotate(-45deg) translate(35px, 35px);
+      background: $green;
+    }
+  
+
+    //MENU - LINKS
+    .navbar-links {
+      display: none;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 84px;
+      left: 0;
+
+      & ul {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          justify-content: flex-end;
+          align-items: center;
+          list-style-type: none;
+          z-index: 200;
+          height: 5rem;
+          background-color: $green;
+          padding: 0.5rem 0;
+          border-bottom: 3px solid $violet;
+          border-top: 3px solid $violet;
+      }
+
+      & li {
+          /* margin-right: 2rem; */
+
+          & a {                    
+              text-decoration: none;
+              font-family: $hero;
+              color: $violet;
+              -webkit-text-stroke: 1px $violet;
+              transition: all 0.3s ease-out;
+          }
+      }
+
+      &.active {
+        display: flex;
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 768px){
+
+
+  .navbar-links ul {
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    flex-wrap: wrap;
+
+    li a:hover{
+      background-color: $violet;
+      color: $green;      
+      -webkit-text-stroke: 1px $green;
+      padding: 0.8rem;
+
+    }
+  }
+}
+
+@media screen and (min-width: 992px){
+
+
+  header nav{
+
+    img{
+      height: 120px ;
+    }
+
+    .menu-btn {
+      display: none !important;
+    }  
+
+    //MENU - LINKS
+    .navbar-links {
+      display: block;
+      position: initial;
+      width: 60%;
+
+      & ul {
+          background-color: $lila;
+          border-bottom: none;
+          border-top: none;
+      }      
+    }
+  }
+}

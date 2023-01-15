@@ -1,0 +1,141 @@
+//  COLORES
+$lila: #D0C2F5;
+$violet: #535FF6;
+$green: #C3F24B;
+
+//  FUENTES
+
+@font-face {
+  font-family: 'heroregular';
+  src: url('../../media/fonts/hero-webfont.woff2') format('woff2'),
+       url('../../media/fonts/hero-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lemon_daysregular';
+  src: url('../../media/fonts/lemon_days-webfont.woff2') format('woff2'),
+       url('../../media/fonts/lemon_days-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$lemon:  'lemon_daysregular';
+$hero: 'heroregular';
+
+
+@mixin title {
+  font-family: $lemon;
+  color: $green;
+  text-align: center;
+  margin: auto; 
+  -webkit-text-stroke: 1px  black; 
+  margin-top: 1rem;
+}
+
+h1{
+  @include title;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+h2{
+  @include title;
+  font-size: 1.375rem;
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+
+h3{
+  font-family: $lemon;
+  font-size: 1rem;
+  color: $violet;
+  text-align: center;
+  margin: auto; 
+}
+
+p{
+  font-family: $hero;
+  font-size: .875rem;
+  color: $violet;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+
+article{
+  margin-top: 1rem;
+}
+
+
+
+
+//  BOTONES
+.boton {
+  height: 2.1875rem;
+  width: fit-content;
+  border: 2px solid $violet;
+  font-family: $hero;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background-color: $green;
+  color: $violet;
+  -webkit-text-stroke: 1px $violet;
+  padding: 0 1rem;
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 768px){
+  h1{
+    font-size: 2rem;
+  }
+  
+  h2{
+    font-size: 1.8rem;
+  }
+  
+  h3{
+    font-size: 1.5rem;
+  }
+  
+  p{
+    font-size: 1.2rem;
+  }
+
+  .boton {
+    padding: 0.7rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+
+    &:hover{
+      border: 2px solid $green;
+      background-color: $violet;
+      color: $green;
+      -webkit-text-stroke: 1px $green;
+    }
+  }
+}
+
+
+@media screen and (min-width: 992px){
+  h1{
+    font-size: 2.5rem;
+  }
+  
+  h2{
+    font-size: 2.3rem;
+  }
+  
+  h3{
+    font-size: 2rem;
+  }
+  
+  p{
+    font-size: 1.3rem;
+  }
+
+}

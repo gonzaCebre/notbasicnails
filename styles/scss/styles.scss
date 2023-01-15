@@ -1,0 +1,39 @@
+@import 'variables';
+@import 'carrusel';
+@import 'header';
+@import 'main';
+
+body{
+  background-color: $lila;
+}
+
+section{
+  position: relative;
+}
+
+footer{
+  margin-top: 3rem !important;
+}
+
+
+footer, .portfolio{
+  margin-top: 3rem;
+  font-family: $hero;
+  font-size: 10px;
+  margin: auto;
+  text-align: center;
+  color: $violet;
+  text-decoration: none;
+}
+
+
+
+@media screen and (min-width: 768px){
+  footer, .portfolio{
+    font-size: 1rem;
+  }
+
+  .portfolio:hover{
+    background-color: $green;
+  }
+}
